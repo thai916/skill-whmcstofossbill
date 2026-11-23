@@ -1,6 +1,7 @@
 ---
-name: whmcsfossbill-skill
+name: skill-whmcstofossbill
 description: Project memory and operating manual for the WHMCStoFossbilling experimental WHMCS 8.x to FOSSBilling 0.8.9 migration module (modules/Whmcstofossbilling/, asset WHMCStoFossbilling-0.2.zip). Use this skill whenever a task involves improving, debugging, reviewing, testing, documenting, packaging, or releasing this module, or whenever it mentions WHMCStoFossbilling, Whmcstofossbilling, WHMCS migration, the 0.2 prerelease, Step 4 drive batches, adaptive batch sizing, imported visibility repair, SQL/GZIP/ZIP backup uploads, a stalled running/paused run, or a session-timeout resume prompt. It carries the settled requirements, hard safety boundaries, architecture, verification commands, and release playbook so a new agent does not re-litigate decisions or perform unauthorized live writes.
+license: AGPL-3.0
 metadata:
   author: Monlam Makhampa
   version: "1"
@@ -87,7 +88,7 @@ Latest verified result: **585 PASS assertions** (77 grants, 106 unit, 44 securit
 - Publication is an explicitly authorized **experimental prerelease**, not production acceptance.
 - Blocked natively: active/suspended/pending hosting, all domain orders, unpaid/draft invoices, compound tax, unknown currencies, unallocated/multi-invoice payments, opaque custom fields, attachments, open tickets. There is no global quarantine: an extension-owned flag is not consulted by core cron/order selectors.
 - Not established: real-provider TLS, production-volume throughput, process-kill/concurrent-writer crash safety, authenticated real-admin browser E2E, live cutover reconciliation. Never report these as passing.
-- The current GitHub release is `0.2` at https://github.com/thai916/WHMCStoFossbilling/releases/tag/0.2 with asset SHA-256 `34205A8A45EDE3EA93D72A2AA0B4DB4FFBE243CAE2C6044C70E1F5A9336FD731` (395287 bytes, 103 entries).
+- The current GitHub release is `0.2` at https://github.com/thai916/WHMCStoFossbilling/releases/tag/0.2 with asset SHA-256 `BC14A81C9F2C557890467798EB0658ADF361406A22B71FF30F6B82E941C35869` (406688 bytes, 103 entries). Both the repository and the asset carry the AGPL-3.0 license.
 
 ## Reference index
 

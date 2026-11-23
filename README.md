@@ -1,7 +1,8 @@
-# whmcsfossbill-skill
+# skill-whmcstofossbill
 
 **Version:** 1  
-**Author:** Monlam Makhampa
+**Author:** Monlam Makhampa  
+**License:** [AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html)
 
 An AI agent skill for understanding, improving, and debugging the **WHMCStoFossbilling** experimental WHMCS 8.x → FOSSBilling 0.8.9 migration module.
 
@@ -21,19 +22,20 @@ I am publishing this so that others who are interested in improving the WHMCStoF
 
 ## Install
 
-Copy `SKILL.md` and `references/` into your agent's skills directory as `whmcsfossbill-skill/`, or install the ready-made `whmcsfossbill-skill.skill` package with your skill tooling.
+Copy `SKILL.md`, `LICENSE`, and `references/` into your agent's skills directory as `skill-whmcstofossbill/`, or install the ready-made `skill-whmcstofossbill.skill` package with your skill tooling.
 
 ## Contents
 
 | Path | Purpose |
 |---|---|
 | `SKILL.md` | Orientation, boundaries, workflow, decision table, verification quick reference, publication gates, and reference index. |
+| `LICENSE` | Full GNU Affero General Public License v3.0 text. |
 | `references/decisions.md` | Rationale behind every settled decision. |
 | `references/architecture.md` | Layers, file map, extension tables, transactions, security, and core-selector constraints. |
 | `references/verification.md` | Commands, environment, assertion counts, test boundaries, integrity caveat. |
 | `references/release-playbook.md` | Packaging, commit/push/retag/`gh` steps, UTF-8 note handling, digest verification. |
 | `references/limits-and-open-work.md` | Blocked categories, unestablished claims, remaining implementation work. |
-| `whmcsfossbill-skill.skill` | Portable packaged copy of the skill. |
+| `skill-whmcstofossbill.skill` | Portable packaged copy of the skill. |
 
 ## Important
 
