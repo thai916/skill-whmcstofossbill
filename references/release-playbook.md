@@ -10,7 +10,7 @@ Exclude `.local/`, `.git/`, `dist/`, `*.zip`, `*.log`. Every entry must be roote
 
 A reliable PowerShell approach is `robocopy <module> <staging>\Whmcstofossbilling /E /XD .local .git dist /XF *.zip *.log` (exit codes 0–7 are success), then write entries with `System.IO.Compression.ZipFile` using forward-slash relative paths. Verify entry count, zero excluded-path leaks, and SHA-256.
 
-Current verified asset: 103 entries, 84 files, 406688 bytes, SHA-256 `BC14A81C9F2C557890467798EB0658ADF361406A22B71FF30F6B82E941C35869`. It carries the full AGPL-3.0 `LICENSE` text and `manifest.json` declares `AGPL-3.0`. The earlier assets (`34205A8A45EDE3EA93D72A2AA0B4DB4FFBE243CAE2C6044C70E1F5A9336FD731`, `A5EC0440E51B0D7A81524DC66C2474234E28513F8AA15B8FF8902E47B7E75C01`) are stale.
+Current verified asset: 103 entries, 84 files, 407921 bytes, SHA-256 `C952A86A6CFC7C5C60F4E24D03C111CBCF94BADD5EDC1DE4E7B5317FBDF63A3B`. It carries the full AGPL-3.0 `LICENSE` text and `manifest.json` declares `AGPL-3.0`. The earlier assets (`BC14A81C9F2C557890467798EB0658ADF361406A22B71FF30F6B82E941C35869`, `34205A8A45EDE3EA93D72A2AA0B4DB4FFBE243CAE2C6044C70E1F5A9336FD731`, `A5EC0440E51B0D7A81524DC66C2474234E28513F8AA15B8FF8902E47B7E75C01`) are stale.
 
 ## 2. Commit and push
 

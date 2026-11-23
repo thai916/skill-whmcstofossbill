@@ -88,7 +88,7 @@ Latest verified result: **585 PASS assertions** (77 grants, 106 unit, 44 securit
 - Publication is an explicitly authorized **experimental prerelease**, not production acceptance.
 - Blocked natively: active/suspended/pending hosting, all domain orders, unpaid/draft invoices, compound tax, unknown currencies, unallocated/multi-invoice payments, opaque custom fields, attachments, open tickets. There is no global quarantine: an extension-owned flag is not consulted by core cron/order selectors.
 - Not established: real-provider TLS, production-volume throughput, process-kill/concurrent-writer crash safety, authenticated real-admin browser E2E, live cutover reconciliation. Never report these as passing.
-- The current GitHub release is `0.2` at https://github.com/thai916/WHMCStoFossbilling/releases/tag/0.2 with asset SHA-256 `BC14A81C9F2C557890467798EB0658ADF361406A22B71FF30F6B82E941C35869` (406688 bytes, 103 entries). Both the repository and the asset carry the AGPL-3.0 license.
+- The current GitHub release is `0.2` at https://github.com/thai916/WHMCStoFossbilling/releases/tag/0.2 with asset SHA-256 `C952A86A6CFC7C5C60F4E24D03C111CBCF94BADD5EDC1DE4E7B5317FBDF63A3B` (407921 bytes, 103 entries). Both the repository and the asset carry the AGPL-3.0 license.
 
 ## Reference index
 
