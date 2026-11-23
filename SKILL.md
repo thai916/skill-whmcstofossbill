@@ -75,7 +75,7 @@ node tests/browser.cjs
 & $php tests/integrity.php
 ```
 
-Latest verified result: **585 PASS assertions** (77 grants, 106 unit, 44 security, 20 render, 68 backup, 246 integration, 20 connection, 4 browser) and syntax checks for 59 PHP + 2 JS files. Integrity reports 8100 files checked with the two known external differences.
+Latest verified result: **604 PASS assertions** (77 grants, 106 unit, 44 security, 20 render, 68 backup, 265 integration, 20 connection, 4 browser) and syntax checks for 59 PHP + 2 JS files. Integrity reports 8100 files checked with the two known external differences.
 
 ## Living safely with unfinished runs
 
@@ -86,9 +86,10 @@ Latest verified result: **585 PASS assertions** (77 grants, 106 unit, 44 securit
 ## Publication and truthfulness gates
 
 - Publication is an explicitly authorized **experimental prerelease**, not production acceptance.
-- Blocked natively: active/suspended/pending hosting, all domain orders, unpaid/draft invoices, compound tax, unknown currencies, unallocated/multi-invoice payments, opaque custom fields, attachments, open tickets. There is no global quarantine: an extension-owned flag is not consulted by core cron/order selectors.
+- Blocked natively: active/suspended/pending hosting, all domain orders, unpaid/draft invoices, compound tax, unknown/ambiguous currencies (except the explicit, disclosed linked-client policy for NULL source invoice currency), unallocated/multi-invoice payments, opaque custom fields, attachments, open tickets. There is no global quarantine: an extension-owned flag is not consulted by core cron/order selectors.
 - Not established: real-provider TLS, production-volume throughput, process-kill/concurrent-writer crash safety, authenticated real-admin browser E2E, live cutover reconciliation. Never report these as passing.
-- The current GitHub release is `0.2` at https://github.com/thai916/WHMCStoFossbilling/releases/tag/0.2 with asset SHA-256 `C952A86A6CFC7C5C60F4E24D03C111CBCF94BADD5EDC1DE4E7B5317FBDF63A3B` (407921 bytes, 103 entries). Both the repository and the asset carry the AGPL-3.0 license.
+- Historical services without a package-name plan or assigned server publish NULL references; never invent plan/server records. NULL invoice currency remains blocked unless a newly authorized run freezes `missing_invoice_currency = client_currency`; the original NULL stays archived, the UI lists the first 100 with a total, the full JSON/CSV report contains every inference, and exception-only downloads stay failed-record-only. Other unknown/ambiguous currencies remain blocked.
+- The current GitHub release is `0.2` at https://github.com/thai916/WHMCStoFossbilling/releases/tag/0.2 with asset SHA-256 `7A776BB47A31015C81D8FE82DAE0ED77FC11A91096449FE25C98E7EA984B933D` (415373 bytes, 103 entries). Both the repository and the asset carry the AGPL-3.0 license.
 
 ## Reference index
 

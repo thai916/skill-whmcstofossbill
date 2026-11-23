@@ -14,7 +14,7 @@ FOSSBilling 0.8.9, PHP 8.3+ (local runtime 8.4.28), mixed Doctrine ORM/DBAL and 
 | `Mapping/` | Versioned field-disposition registry and allowlisted text transforms |
 | `Security/` | Safe errors, conservative sensitive-data policy, AES-256-GCM credential vault |
 | `Installation/` | Idempotent extension-only DDL |
-| `Destination/` | Validated aggregates, products/pricing/servers, inactive hosting, eligible invoices/payments/credits, closed history, scoped visibility repair |
+| `Destination/` | Validated aggregates, products/pricing/servers, inactive hosting with nullable missing references, eligible invoices/payments/credits with disclosed opt-in currency inference, closed history, scoped visibility repair |
 | `Archive/` | Redacted structured evidence, historical dates, relationship hints, prior revisions |
 | `Migration/` | Plan, durable cursors, serialization, adaptive batch sizing, bounded batches, retries |
 | `Finance/` | Decimal arithmetic and resumable extracted-baseline/native assessment (not debt/cutover reconciliation) |

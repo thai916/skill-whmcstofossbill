@@ -17,7 +17,8 @@ I am publishing this so that others who are interested in improving the WHMCStoF
 - Adaptive batching (500 → 2000 rows), rate-limit-safe drive calls, 32-hex idempotency, and truthful progress.
 - Native visibility flags (`group_master`, `approved`), the confirmed `REPAIR IMPORTED VISIBILITY` action, and passive session-timeout recovery.
 - Two-source UI, direct DB path, SQL/GZIP/ZIP upload path, strict invalid-date default, fresh-install and overwrite safeguards.
-- Exact verification commands, the 585-assertion baseline, known integrity differences, and the `0.2` release playbook.
+- Exact verification commands, the 604-assertion baseline, known integrity differences, and the `0.2` release playbook.
+- Nullable historical hosting references and the explicit, disclosed linked-client currency policy for NULL invoice currency.
 - Production blockers and claims that must never be reported as passing.
 
 ## Install

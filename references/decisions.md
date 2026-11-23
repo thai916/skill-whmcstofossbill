@@ -30,6 +30,13 @@ Read this before changing behavior in any area listed here. Each decision was ma
 - `Destination/InvoiceImporter` sets `invoice.approved = 1` for eligible `paid`/`canceled`/`refunded` invoices. Core `Invoice\Api\Client::get_list()` forces `approved = true`. Only non-unpaid statuses are eligible, so approval grants visibility without creating a payable state. Unpaid/draft invoices remain blocked.
 - Canceled/refunded invoices are administrator-visible only: the core client portal has Paid/Unpaid tabs, so no portal status is fabricated.
 
+## Nullable hosting references and opt-in invoice currency
+
+- Historical hosting rows without a package-name plan or assigned server publish `service_hosting_hp_id`/`service_hosting_server_id` as `NULL`. Both core columns are nullable; do not invent plan/server records. Keep the original source IDs in the private archive and native order metadata (`legacy_package_id`, `legacy_server`).
+- A NULL/empty source invoice currency remains blocked by default. Only a newly authorized run whose frozen plan contains `missing_invoice_currency = client_currency` may use the linked client's native currency from the same import. The policy is validated, included in existing-run differences, and cannot be added to an old run.
+- Under the opt-in, keep the original NULL archived, add an explicit inference warning to the native invoice note, and never recalculate amounts/tax/FX. The run status reports `currency_inference_total` and at most 100 rows for the UI; the full JSON/CSV report contains every inference. Exception-only downloads stay failed-record-only and keep only the total count.
+- Other unknown/ambiguous currencies remain blocked. The linked-client policy is not a general currency-inference mechanism.
+
 ## Visibility repair (`Destination/VisibilityRepair.php`, `Service::repairVisibility()`, `Api\Admin::run_repair_visibility()`)
 
 - Confirmation phrase must be exactly `REPAIR IMPORTED VISIBILITY`; wrong phrase changes nothing.

@@ -7,10 +7,10 @@ Use this before implementing a new native category or telling the user something
 - Active, suspended, or pending hosting services. Only terminated/cancelled/fraud records become native canceled orders, with exact source status retained in metadata.
 - All native domain orders.
 - Unpaid/draft invoices: core `findUnpaidOlderThan()` does not check approval, so approval would not isolate them from expiry deletion.
-- Compound taxes, discount variants, unknown historical currencies without explicit source currency, unallocated/multi-invoice payments, simultaneous in/out credit movements, complete outstanding-debt reconstruction, and historical FX/income semantics.
+- Compound taxes, discount variants, unknown/ambiguous historical currencies without explicit source currency (except the explicit, disclosed linked-client policy for NULL/empty invoice currency), unallocated/multi-invoice payments, simultaneous in/out credit movements, complete outstanding-debt reconstruction, and historical FX/income semantics.
 - Opaque custom-field values, opaque product/module configuration slots (may contain secrets), unknown/custom module tables, binary/oversized/invalid-UTF-8 values, attachments (metadata only; no verified file transfer).
 - Open-ticket workflows, configurable status/author mapping, chronological staging of out-of-order replies. Only closed tickets and redacted plain-text email history are published.
-- Active configurable options, independently fixed non-base-currency native prices, reviewed module-specific package-slot mappings, ambiguous server groups, contact/shared-user ownership.
+- Active configurable options, independently fixed non-base-currency native prices, reviewed module-specific package-slot mappings, ambiguous server groups, contact/shared-user ownership. Missing historical plan/server references are nullable by design; never invent them.
 
 ## Structural reasons
 
